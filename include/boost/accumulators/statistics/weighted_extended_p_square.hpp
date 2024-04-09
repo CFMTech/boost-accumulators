@@ -87,8 +87,8 @@ namespace impl
               , boost::end(args[extended_p_square_probabilities])
             )
           , heights(2 * probabilities.size() + 3)
-          , actual_positions(heights.size())
-          , desired_positions(heights.size())
+          , actual_positions(2 * probabilities.size() + 3)
+          , desired_positions(2 * probabilities.size() + 3)
         {
         }
 
@@ -265,9 +265,11 @@ namespace impl
 
     private:
         array_type probabilities;         // the quantile probabilities
-        array_type heights;               // q_i
         array_type actual_positions;      // n_i
         array_type desired_positions;     // d_i
+
+    public:
+        array_type heights;               // q_i
     };
 
 } // namespace impl

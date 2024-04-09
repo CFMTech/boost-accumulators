@@ -452,7 +452,7 @@ struct accumulator_set
         fusion::for_each(this->accumulators, serializer);
     }
 
-private:
+public:
 
     accumulators_type accumulators;
 };
